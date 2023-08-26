@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 const qualificationsData = [
     {
         year: '2020 - 2024 (Expected)',
@@ -9,7 +10,7 @@ const qualificationsData = [
     },
     {
         year: '2017 - 2019',
-        institution: 'Lal Bahadur School, Kota',
+        institution: 'Lal Bahadur Shastri Sr. Sec. School, Kota',
         description: 'Completed class 12th - (PCM)',
         imageSrc: 'https://pbs.twimg.com/profile_images/1295831328/Logo_LBS_Group_copy_400x400.jpg', // Replace with actual image URL
     },

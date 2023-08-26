@@ -21,9 +21,9 @@ const Home = () => {
   <div div className = "bg-black/90 min-h-screen flex flex-col md:flex-row justify-center items-center" >
       <div className="md:w-1/2 p-8 pl-0">
         <img
-          src="https://scontent.fbho3-2.fna.fbcdn.net/v/t1.6435-9/72530332_136686904393298_1701810074403471360_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=e3f864&_nc_ohc=tcTqKwd_takAX9qWmNJ&_nc_ht=scontent.fbho3-2.fna&oh=00_AfAWdIo0X72A-NHadtqNNhMBGqHUjrR9hJTECf_hEj_eTA&oe=65114C90"
+          src="https://scontent.fbho3-1.fna.fbcdn.net/v/t1.6435-9/72197424_136685654393423_2577416694737666048_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=174925&_nc_ohc=-DVZwry4pX0AX_KWvh0&_nc_ht=scontent.fbho3-1.fna&oh=00_AfD8HC2vsCBFvYvv0a0VHvGk4q35f6Qn38_8WK-Nao1SJg&oe=65117C3C"
           alt="Ashutosh Kumar"
-          className="rounded-full h-72 w-72 mx-auto mb-4 object-cover md:h-96 md:w-96 hover:grayscale"
+          className="rounded-full grayscale h-72 w-72 mx-auto mb-4 object-cover md:h-96 md:w-96 hover:grayscale-0"
         />
       </div>
       <div className="md:w-1/2 pr-2 text-center md:text-left">
