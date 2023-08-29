@@ -25,7 +25,7 @@ const qualificationsData = [
 
 const Qualifications = () => {
     return (
-        <div className="bg-black/90 min-h-screen py-16 flex flex-col">
+        <div className="bg-black min-h-screen py-16 flex flex-col">
             <div className="container mx-auto mt-1 text-center"> {/* Added mt-8 for top margin */}
                 <h1 className="text-4xl font-bold text-white mb-10 flex items-start">My Qualifications</h1>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

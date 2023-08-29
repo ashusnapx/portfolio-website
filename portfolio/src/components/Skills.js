@@ -5,7 +5,7 @@ import { AiFillDatabase } from 'react-icons/ai';
 
 const Skills = () => {
   return (
-    <div className="bg-black/90 text-gray-300 min-h-screen py-16">
+    <div className="bg-black text-gray-300 min-h-screen py-16">
       <div className="container mx-auto">
         <h1 className="text-4xl font-bold mb-8 text-gray-100">My Skills</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

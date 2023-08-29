@@ -7,6 +7,8 @@ import Qualifications from './components/Qualifications';
 import Contact from './components/Contact';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import ImportantLinks from './components/ImportantLinks';
+import AiArtWork from './components/AiArtWork';
 
 function App() {
   return (
@@ -28,6 +30,8 @@ const appRouter = createBrowserRouter( [
       { path: '/projects', element: <Projects /> },
       { path: '/qualifications', element: <Qualifications /> },
       { path: '/contact', element: <Contact /> },
+      { path: '/imp-links', element: <ImportantLinks /> },
+      {path:'/ai-artworks', element: <AiArtWork/>}
     ],
   },
 ] );
