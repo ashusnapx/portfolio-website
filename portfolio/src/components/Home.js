@@ -29,7 +29,7 @@ const Home = () => {
   }, [ currentIndex, text ] );
 
   return (
-    <div className="bg-black min-h-screen flex flex-col md:flex-row justify-center items-center">
+    <div className="bg-black min-h-screen flex flex-col md:flex-row justify-center items-center overflow-hidden">
       <div className="md:w-1/2 p-8 pl-0">
         <img
           src="https://scontent.fbho3-1.fna.fbcdn.net/v/t1.6435-9/72197424_136685654393423_2577416694737666048_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=174925&_nc_ohc=-DVZwry4pX0AX_KWvh0&_nc_ht=scontent.fbho3-1.fna&oh=00_AfD8HC2vsCBFvYvv0a0VHvGk4q35f6Qn38_8WK-Nao1SJg&oe=65117C3C"
