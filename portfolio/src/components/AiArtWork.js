@@ -39,8 +39,8 @@ const AiArtWork = () => {
                                 src={link}
                                 alt={`AI Artwork ${ index + 1 }`}
                                 className="w-full h-auto"
+                                loading="lazy"
                             />
-                            {/* Add hover overlay or any other desired information */}
                         </div>
                     ) )}
                 </div>

@@ -14,7 +14,7 @@ const projectsData = [
   {
     id: 2,
     name: 'Swiggie - Food Ordering App',
-    imageSrc: 'https://www.cypressgreen.in/blog/wp-content/uploads/2021/03/food.jpg', // Replace with actual image URL
+    imageSrc: 'https://i.postimg.cc/8zd9ntRC/Screenshot-2023-08-30-at-4-39-38-PM.png', // Replace with actual image URL
     techStacks: 'React, Tailwind CSS, React router dom, Redux toolkit',
     // description: 'Another project description.',
     githubLink: 'https://github.com/ashusnapx/react-final-revision/tree/main/DAY%20-%204',
@@ -23,11 +23,20 @@ const projectsData = [
   {
     id: 3,
     name: 'Portfolio Website',
-    imageSrc: 'https://i.postimg.cc/XvjJjH6B/Screenshot-2023-08-26-at-5-03-07-PM.png', // Replace with actual image URL
+    imageSrc: 'https://i.postimg.cc/mrLXp9yf/Screenshot-2023-08-30-at-4-44-36-PM.png', // Replace with actual image URL
     techStacks: 'React, Tailwind CSS, React router dom',
     // description: 'Another project description.',
     githubLink: 'https://github.com/ashusnapx/portfolio-website/tree/main/portfolio',
     liveLink: 'https://ashusnapx.vercel.app/'
+  },
+  {
+    id: 4,
+    name: 'Restaurant Website',
+    imageSrc: 'https://i.postimg.cc/BQ7BZDJC/Screenshot-2023-08-30-at-4-43-05-PM.png', // Replace with actual image URL
+    techStacks: 'HTML, CSS',
+    // description: 'Another project description.',
+    githubLink: 'https://github.com/ashusnapx/ashufoodlove.github.io',
+    liveLink: 'https://ashusnapx.github.io/ashufoodlove.github.io/'
   },
   // Add more projects...
 ];
