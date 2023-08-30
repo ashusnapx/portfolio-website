@@ -18,7 +18,7 @@ const projectsData = [
     techStacks: 'React, Tailwind CSS, React router dom, Redux toolkit',
     // description: 'Another project description.',
     githubLink: 'https://github.com/ashusnapx/react-final-revision/tree/main/DAY%20-%204',
-    liveLink: 'https://github.com/ashusnapx/react-final-revision/tree/main/DAY%20-%204'
+    liveLink: 'https://swiggie.vercel.app/'
   },
   {
     id: 3,
