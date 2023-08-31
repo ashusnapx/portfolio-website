@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import React from 'react';
 import { FaGithub, FaExternalLinkAlt} from 'react-icons/fa';
 
@@ -42,6 +43,9 @@ const projectsData = [
 ];
 
 const Projects = () => {
+  useEffect( () => {
+    window.scrollTo( 0, 0 );
+  }, [] );
   return (
     <div className="relative min-h-screen bg-black">
       <div className="container mx-auto py-12 px-4">

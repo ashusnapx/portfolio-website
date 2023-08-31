@@ -1,19 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import img_11up from '../images/img_11up.png';
 
 const Header = () => {
-    const [ isMenuOpen, setIsMenuOpen ] = useState( false );
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
     const location = useLocation();
 
     const toggleMenu = () => {
-        setIsMenuOpen( !isMenuOpen );
+        setIsMenuOpen(!isMenuOpen);
     };
 
-    const closeMenu = () => {
-        setIsMenuOpen( false );
-    };
+    useEffect(() => {
+        setIsMenuOpen(false); // Close the menu when location changes
+    }, [location]);
 
     return (
         <header className="sticky top-0 bg-black text-white shadow-md py-5 z-50">
@@ -28,32 +28,27 @@ const Header = () => {
                         <GiHamburgerMenu />
                     </button>
                 </div>
-                <ul
-                    className={`${ isMenuOpen ? 'block' : 'hidden'
-                        } md:flex md:space-x-4 md:items-center text-lg mt-4 md:mt-0`}
-                >
-                    <NavItem to="/skills" text="SKILLS" closeMenu={closeMenu} location={location} />
-                    <NavItem to="/projects" text="PROJECTS" closeMenu={closeMenu} location={location} />
-                    <NavItem to="/imp-links" text="IMPORTANT LINKS" closeMenu={closeMenu} location={location} />
-                    <NavItem to="/qualifications" text="QUALIFICATIONS" closeMenu={closeMenu} location={location} />
-                    <NavItem to="/ai-artworks" text="AI ART WORK" closeMenu={closeMenu} location={location} />
-                    <NavItem to="/contact" text="CONTACT" closeMenu={closeMenu} location={location} />
+                <ul className={`md:flex md:space-x-4 md:items-center text-lg mt-4 md:mt-0 ${isMenuOpen ? 'block' : 'hidden'}`}>
+                    <NavItem to="/skills" text="SKILLS" location={location} />
+                    <NavItem to="/projects" text="PROJECTS" location={location} />
+                    <NavItem to="/imp-links" text="IMPORTANT LINKS" location={location} />
+                    <NavItem to="/qualifications" text="QUALIFICATIONS" location={location} />
+                    <NavItem to="/ai-artworks" text="AI ART WORK" location={location} />
+                    <NavItem to="/contact" text="CONTACT" location={location} />
                 </ul>
             </nav>
         </header>
     );
 };
 
-const NavItem = ( { to, text, closeMenu, location } ) => {
+const NavItem = ({ to, text, location }) => {
     const isActive = location.pathname === to;
 
     return (
         <li>
             <Link
                 to={to}
-                onClick={closeMenu}
-                className={`block px-4 py-2 text-gray-300 hover:text-white transition-colors duration-300 relative ${ isActive ? 'font-semibold text-white' : ''
-                    }`}
+                className={`block px-4 py-2 text-gray-300 hover:text-green-600 transition-colors duration-300 relative ${isActive ? 'font-semibold text-orange-500' : ''}`}
             >
                 {text}
                 {isActive && (

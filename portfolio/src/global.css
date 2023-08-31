@@ -1,94 +1,94 @@
-/* src/global.css */
-
-/* Apply Poppins font to the body */
+/* Set a consistent font family and background color */
 body {
     font-family: 'Poppins', sans-serif;
-    /* overflow: hidden; */
+    background-color: #1f2937;
+    color: #ffffff;
 }
 
-/* Responsive container */
+/* Set maximum width for content */
 .container {
-    width: 100%;
     max-width: 1200px;
-    /* Set your desired max-width */
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    position: sticky;
+    top: 0;
+    background-color: #111827;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+/* Sections */
+section {
+    padding: 60px 0;
+}
+
+/* Text styles */
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+/* Grid layout for projects, qualifications, and skills */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+/* Cards for projects, qualifications, and skills */
+.card {
+    background-color: #374151;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Responsive typography */
-.text-4xl {
-    font-size: 2rem;
-    /* Adjust as needed */
-}
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 28px;
+    }
 
-/* Add the custom mobile margin */
-@media (max-width: 639px) {
-    body {
-        margin-top: var(--margin-mobile, 0);
+    h2 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 16px;
     }
 }
-
-/* For medium screens and above */
-@media (min-width: 768px) {
-    .text-4xl {
-        font-size: 2.5rem;
-        /* Adjust as needed for medium screens */
-    }
-}
-
-/* For large screens and above */
-@media (min-width: 1024px) {
-    .text-4xl {
-        font-size: 3rem;
-        /* Adjust as needed for large screens */
-    }
-}
-
-/* Add any other global styles here */
 
 /* Responsive grid */
-.grid-cols-1 {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
-}
-
-/* For medium screens and above */
-@media (min-width: 768px) {
-    .grid-cols-1 {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        /* Adjust as needed for medium screens */
-    }
-}
-
-/* For large screens and above */
-@media (min-width: 1024px) {
-    .grid-cols-1 {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        /* Adjust as needed for large screens */
-    }
-}
-
-/* Responsive padding/margin */
-.py-16 {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-}
-
-/* For medium screens and above */
-@media (min-width: 768px) {
-    .py-16 {
-        padding-top: 5rem;
-        /* Adjust as needed for medium screens */
-        padding-bottom: 5rem;
-    }
-}
-
-/* For large screens and above */
-@media (min-width: 1024px) {
-    .py-16 {
-        padding-top: 6rem;
-        /* Adjust as needed for large screens */
-        padding-bottom: 6rem;
+@media screen and (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
 }

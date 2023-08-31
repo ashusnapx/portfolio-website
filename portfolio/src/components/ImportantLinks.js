@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import { FaExternalLinkAlt } from 'react-icons/fa';
 
 const linksData = [
@@ -42,6 +42,9 @@ const linksData = [
 ];
 
 const ImportantLinks = () => {
+    useEffect( () => {
+        window.scrollTo( 0, 0 );
+    }, [] );
     return (
         <div className="min-h-screen bg-black py-16">
             <div className="container mx-auto px-4">

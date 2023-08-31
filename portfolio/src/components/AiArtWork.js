@@ -9,6 +9,7 @@ import img_7 from '../images/img_7.png';
 import img_8 from '../images/img_8.png';
 import img_9 from '../images/img_9.png';
 import img_10 from '../images/img_10.png';
+import { useEffect } from 'react';
 
 const AiArtWork = () => {
     const imageLinks = [
@@ -24,6 +25,9 @@ const AiArtWork = () => {
         img_2,
         // Add more image links as needed
     ];
+    useEffect( () => {
+        window.scrollTo( 0, 0 );
+    }, [] );
 
     return (
         <div className="py-16 bg-black min-h-screen">
