@@ -1,22 +1,44 @@
-import React,{useEffect} from 'react';
+import React, { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
-  useEffect( () => {
-    window.scrollTo( 0, 0 );
-  }, [] );
+  const form = useRef();
+  const [ isMessageSent, setMessageSent ] = useState( false );
+
+  const sendEmail = ( e ) => {
+    e.preventDefault();
+
+    emailjs.sendForm( 'service_p2yaaj4', 'template_cxndmkf', form.current, 'JgEYCSSohQj6br73X' )
+      .then( ( result ) => {
+        console.log( result.text );
+        setMessageSent( true );
+        form.current.reset(); // Reset the form
+
+        setTimeout( () => {
+          setMessageSent( false ); // Hide the success message after 3 seconds (adjust as needed)
+        }, 3000 ); // Adjust the timeout value as needed
+      } )
+      .catch( ( error ) => {
+        console.log( error.text );
+      } );
+  };
+
   return (
     <div className="bg-black min-h-screen flex flex-col md:flex-row items-center justify-center py-10 md:py-20 overflow-hidden">
       <div className="w-full md:w-1/2 lg:w-1/3 mx-auto md:order-2 text-black">
         <div className="bg-white p-6 md:p-8 rounded-md shadow-md text-black mx-2">
           <h1 className="text-3xl font-bold mb-6 text-center md:text-left text-black">Contact Me</h1>
-          <form className="space-y-4">
+          {isMessageSent && (
+            <p className="text-green-500 mb-4">Message sent successfully!</p>
+          )}
+          <form className="space-y-4" ref={form} onSubmit={sendEmail}>
             <div>
               <label htmlFor="name" className="block font-semibold mb-1">Your Name</label>
-              <input type="text" id="name" name="name" className="w-full border rounded p-2 focus:outline-none focus:border-blue-500" />
+              <input type="text" id="name" name="from_name" className="w-full border rounded p-2 focus:outline-none focus:border-blue-500" />
             </div>
             <div>
               <label htmlFor="email" className="block font-semibold mb-1">Email</label>
-              <input type="email" id="email" name="email" className="w-full border rounded p-2 focus:outline-none focus:border-blue-500" />
+              <input type="email" id="email" name="from_email" className="w-full border rounded p-2 focus:outline-none focus:border-blue-500" />
             </div>
             <div>
               <label htmlFor="message" className="block font-semibold mb-1">Your Message</label>
@@ -37,6 +59,6 @@ const Contact = () => {
       </div>
     </div>
   );
-}
+};
 
 export default Contact;
