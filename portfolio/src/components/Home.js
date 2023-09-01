@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { FaExternalLinkAlt } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
+import Projects from "./Projects";
 
 const Home = () => {
   const introText = [
@@ -60,15 +62,13 @@ const Home = () => {
             <FaExternalLinkAlt className="mr-2" />
             View Resume
           </a>
-          <a
-            href="https://drive.google.com/file/d/18QGrkOvgGg6Icpf62RA69HHLoRrJVc5Z/view?usp=sharing"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to= "/projects"
             className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full text-lg font-semibold transition duration-300 flex flex-row items-center justify-center"
           >
             <FaExternalLinkAlt className="mr-2" />
             View Projects
-          </a>
+          </Link>
         </div>
       </div>
     </div>
