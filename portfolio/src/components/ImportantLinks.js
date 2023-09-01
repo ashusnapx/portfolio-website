@@ -1,4 +1,4 @@
-import React,{useEffect} from 'react';
+import React, { useEffect } from 'react';
 import { FaExternalLinkAlt } from 'react-icons/fa';
 
 const linksData = [
@@ -6,13 +6,19 @@ const linksData = [
         name: 'Leetcode',
         link: 'https://leetcode.com/dollarSign/',
         logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/LeetCode_Logo_black_with_text.svg/2560px-LeetCode_Logo_black_with_text.svg.png',
-        description: 'Contest rating: 1452 | Questions solved: 204+ | Contests given: 27',
+        description: 'Contest rating: 1452 | Questions solved: 204+ | Contests given: 27 --> Its an online coding platform which offers various level problems. ',
     },
     {
         name: 'Coding Ninjas',
         link: 'https://www.codingninjas.com/studio/profile/ashusnapx',
         logo: 'https://asset.brandfetch.io/idQVGbrvGL/idFrWdCkB5.png',
-        description: 'Online coding and programming courses platform',
+        description: 'Online coding and programming courses platform and i also worked as teaching assistant.',
+    },
+    {
+        name: 'Github',
+        link: 'https://github.com/ashusnapx',
+        logo: 'https://github.githubassets.com/images/modules/logos_page/GitHub-Logo.png',
+        description: 'Web-based platform for version control and collaboration on software projects. Love this tool.',
     },
     {
         name: 'LinkedIn',
@@ -23,7 +29,7 @@ const linksData = [
     {
         name: 'X (Previously Twitter)',
         link: 'https://twitter.com/ashu_snapx',
-        logo: 'https://akm-img-a-in.tosshub.com/businesstoday/images/story/202307/x_twitter-sixteen_nine.jpg',
+        logo: 'https://img.freepik.com/premium-vector/twitter-new-logo-twitter-x-twitter-logo-vinnitsa-ukraine-july-25-2023_230281-303.jpg?w=2000',
         description: 'Love this platforms due to its networking capabilities.',
     },
     {
@@ -36,13 +42,7 @@ const linksData = [
         name: 'Hashnode',
         link: 'https://hashnode.com/@ashusnapx',
         logo: 'https://cdn.hashnode.com/res/hashnode/image/upload/v1675531271955/ALEtNA1cM.png?auto=compress',
-        description: 'Community-driven platform for developers to write and share technical articles.',
-    },
-    {
-        name: 'Github',
-        link: 'https://github.com/ashusnapx',
-        logo: 'https://github.githubassets.com/images/modules/logos_page/GitHub-Logo.png',
-        description: 'Web-based platform for version control and collaboration on software projects.',
+        description: 'Community-driven platform for developers to write and share technical articles. ',
     },
     // ... (other links)
 ];
@@ -62,13 +62,13 @@ const ImportantLinks = () => {
                                 <img src={link.logo} alt={link.name} className="w-2/3 mx-auto" />
                             </div>
                             <div className="px-6 pb-6">
-                                <h2 className="text-xl font-semibold mb-2">{link.name}</h2>
+                                <h2 className="text-xl font-semibold mb-2 text-black">{link.name}</h2>
                                 <p className="text-gray-500 mb-4">{link.description}</p>
                                 <a
                                     href={link.link}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="flex items-center bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition duration-300"
+                                    className="flex items-center bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition duration-300 flex-grow"
                                 >
                                     <FaExternalLinkAlt className="mr-2" /> Link to Open
                                 </a>
