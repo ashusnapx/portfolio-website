@@ -9,7 +9,7 @@ const qualificationsData = [
         imageSrc: 'https://upload.wikimedia.org/wikipedia/en/f/f2/Jabalpur_Engineering_College_%28JEC%29%27s_logo.png', // Replace with actual image URL
     },
     {
-        year: '2017 - 2019 and secured 63.2%',
+        year: '2017 - 2019 and secured (beep-boop)%',
         institution: 'Lal Bahadur Shastri Sr. Sec. School, Kota',
         description: 'Completed class 12th - (PCM) ',
         imageSrc: 'https://pbs.twimg.com/profile_images/1295831328/Logo_LBS_Group_copy_400x400.jpg', // Replace with actual image URL
