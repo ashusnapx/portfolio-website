@@ -21,6 +21,12 @@ const linksData = [
         description: 'Professional networking platform for connecting with colleagues and potential employers.',
     },
     {
+        name: 'X (Previously Twitter)',
+        link: 'https://twitter.com/ashu_snapx',
+        logo: 'https://akm-img-a-in.tosshub.com/businesstoday/images/story/202307/x_twitter-sixteen_nine.jpg',
+        description: 'Love this platforms due to its networking capabilities.',
+    },
+    {
         name: 'Medium',
         link: 'https://medium.com/@ashusnapx',
         logo: 'https://miro.medium.com/v2/resize:fit:8978/1*s986xIGqhfsN8U--09_AdA.png',
