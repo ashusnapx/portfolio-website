@@ -3,26 +3,44 @@ import React from 'react';
 import { FaGithub, FaExternalLinkAlt} from 'react-icons/fa';
 
 const projectsData = [
-  // {
-  //   id: 1,
-  //   name: 'BoardPro+',
-  //   imageSrc: 'https://camo.githubusercontent.com/42b5b898dc83fea96ab26cfaad090fbb3c6ff091e63bdbf17df96c7ae6d4a6e5/68747470733a2f2f646c2e64726f70626f7875736572636f6e74656e742e636f6d2f732f656b32373478386a30697a787534782f5472656c6c6f2532304d61696e253230506167652e706e673f646c3d30', // Replace with actual image URL
-  //   techStacks: 'React, Tailwind CSS',
-  //   // description: 'A project description goes here.',
-  //   githubLink: 'https://github.com/ashusnapx/react-final-revision/tree/main/DAY%20-%204',
-  //   liveLink:'https://boardpro-ashusnapx.vercel.app/'
-  // },
+  {
+    id: 1,
+    name: 'Airbnb Clone',
+    imageSrc: 'https://i.postimg.cc/nc7XGF4S/Screenshot-2023-10-07-at-1-03-54-AM.png', // Replace with actual image URL
+    techStacks: 'React, Tailwind CSS, Supabase, OAuth',
+    // description: 'A project description goes here.',
+    githubLink: 'https://github.com/ashusnapx/airbnb-x-oyo',
+    liveLink:'https://airbnb-by-ashusnapx.vercel.app/'
+  },
   {
     id: 2,
     name: 'Swiggie - Food Ordering App',
     imageSrc: 'https://i.postimg.cc/8zd9ntRC/Screenshot-2023-08-30-at-4-39-38-PM.png', // Replace with actual image URL
-    techStacks: 'React, Tailwind CSS, React router dom, Redux toolkit',
+    techStacks: 'React, Tailwind CSS, React router dom, Redux toolkit, [Please enable CORS]',
     // description: 'Another project description.',
     githubLink: 'https://github.com/ashusnapx/react-final-revision/tree/main/DAY%20-%204',
     liveLink: 'https://swiggie.vercel.app/'
   },
   {
     id: 3,
+    name: 'Youtube Playlist Checklist',
+    imageSrc: 'https://i.postimg.cc/Gpp3VdDC/Screenshot-2023-10-01-at-1-11-58-AM.png', // Replace with actual image URL
+    techStacks: 'React, Tailwind CSS',
+    // description: 'Another project description.',
+    githubLink: 'https://github.com/ashusnapx/checklist-app',
+    liveLink: 'https://youtube-playlist-checklist.vercel.app/'
+  },
+  {
+    id: 4,
+    name: 'Youtube Playlist Analytics',
+    imageSrc: 'https://i.postimg.cc/L6dbbDP4/Screenshot-2023-10-07-at-1-10-10-AM.png', // Replace with actual image URL
+    techStacks: 'Python, Django, [Revamped UI]',
+    // description: 'Another project description.',
+    githubLink: 'https://github.com/ashusnapx/youtube-playlist-length',
+    liveLink: 'https://yt-playlist-length-4nzq.onrender.com/'
+  },
+  {
+    id: 5,
     name: 'Portfolio Website',
     imageSrc: 'https://i.postimg.cc/mrLXp9yf/Screenshot-2023-08-30-at-4-44-36-PM.png', // Replace with actual image URL
     techStacks: 'React, Tailwind CSS, React router dom',
@@ -31,7 +49,7 @@ const projectsData = [
     liveLink: 'https://ashusnapx.vercel.app/'
   },
   {
-    id: 4,
+    id: 6,
     name: 'Restaurant Website',
     imageSrc: 'https://i.postimg.cc/BQ7BZDJC/Screenshot-2023-08-30-at-4-43-05-PM.png', // Replace with actual image URL
     techStacks: 'HTML, CSS',
@@ -56,9 +74,10 @@ const Projects = () => {
               <img
                 src={project.imageSrc}
                 alt={project.name}
+                loading="lazy" // Add this line for lazy loading
                 className="w-full h-48 object-cover rounded-md mb-4"
               />
-              <h2 className="text-xl font-semibold mb-2 text-black text-xl">{project.name}</h2>
+              <h2 className="text-xl font-semibold mb-2 text-black">{project.name}</h2>
               <p className="text-gray-500 mb-2">{project.techStacks}</p>
               <p className="text-gray-800">{project.description}</p>
               <div className="mt-4 flex space-x-4">

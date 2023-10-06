@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { FaExternalLinkAlt } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import Projects from "./Projects";
+import { LucideBadgeIndianRupee, LucideLightbulb, LucideMilestone} from 'lucide-react';
+
 
 const Home = () => {
   const introText = [
@@ -37,21 +38,25 @@ const Home = () => {
   }, [] );
 
   return (
-    <div className="bg-black min-h-screen flex flex-col md:flex-row items-center justify-center overflow-hidden text-center">
+    <div className="bg-black min-h-screen flex flex-col md:flex-row items-center justify-center overflow-hidden text-center ">
       <div className="md:w-1/2 p-8 md:pl-0 md:pr-4 flex justify-center items-center">
         <img
           src="https://i.postimg.cc/8zfFQ8TT/Profile-picture-2.png"
           alt="Ashutosh Kumar"
           className="rounded-full h-72 w-72 mx-auto mb-4 object-cover md:h-96 md:w-96 hover:grayscale"
+          loading="lazy"
         />
       </div>
       <div className="md:w-1/2 p-4 md:text-left">
-        <h1 className="text-4xl md:text-5xl font-bold text-white mb-2 md:mb-4">
+        <h1 className="text-4xl md:text-5xl font-bold text-gray-600  mb-2 md:mb-4">
           I'm a <span style={{ color: currentColor }}>{displayedText}</span>
         </h1>
-        <p className="text-2xl md:text-4xl text-white mb-4 md:mb-6">
+        <div>
+          <p className="text-2xl md:text-4xl text-gray-600  mb-4 md:mb-6">
           From India 🇮🇳
         </p>
+        
+        </div>
         <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4 items-center justify-start">
           <a
             href="https://drive.google.com/file/d/18QGrkOvgGg6Icpf62RA69HHLoRrJVc5Z/view?usp=sharing"
@@ -59,14 +64,15 @@ const Home = () => {
             rel="noopener noreferrer"
             className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full text-lg font-semibold transition duration-300 flex flex-row items-center justify-center"
           >
-            <FaExternalLinkAlt className="mr-2" />
+            <LucideMilestone className="mr-2" />
+            
             View Resume
           </a>
           <Link
             to= "/projects"
             className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full text-lg font-semibold transition duration-300 flex flex-row items-center justify-center"
           >
-            <FaExternalLinkAlt className="mr-2" />
+            <LucideLightbulb className='mr-2' />
             View Projects
           </Link>
         </div>
