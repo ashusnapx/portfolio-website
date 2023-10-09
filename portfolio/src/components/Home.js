@@ -47,7 +47,7 @@ const Home = () => {
     <div className="bg-gray-100 flex flex-col md:flex-row items-center justify-center py-10 md:py-20">
       {/* <Toaster position="top-right" expand={true} richColors /> */}
       <div className="md:w-1/2 p-8 md:pl-0 md:pr-4 flex justify-center items-center">
-        <ProgressiveImage src="https://i.postimg.cc/8zfFQ8TT/Profile-picture-2.png" placeholder="">
+        <ProgressiveImage src="https://i.postimg.cc/h4CYP6W4/profile-pic-2.png" placeholder="">
           {( src, loading ) => (
             <img
               src={src}
