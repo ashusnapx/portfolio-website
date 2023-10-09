@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { GiHamburgerMenu } from 'react-icons/gi';
 // import img_11up from '../images/img_11up.png';
 import Modal from './Modal';
-import { LucideAtom, LucideBadge, LucideHammer, LucideMousePointerClick, LucidePhoneCall, LucideSchool } from 'lucide-react';
+import { LucideAtom, LucideBadge, LucideHammer, LucideMenu, LucideMousePointerClick, LucidePhoneCall, LucideSchool } from 'lucide-react';
 
 const Header = () => {
     const [ isMenuOpen, setIsMenuOpen ] = useState( false );
@@ -31,7 +31,8 @@ const Header = () => {
                 </div>
                 <div className="md:hidden">
                     <button onClick={toggleMenu} className="text-3xl text-white focus:outline-none">
-                        <GiHamburgerMenu />
+                        {/* <GiHamburgerMenu /> */}
+                        <LucideMenu className='w-8 h-8'/>
                     </button>
                 </div>
                 {/* This ul element will only show on medium and larger screens */}
