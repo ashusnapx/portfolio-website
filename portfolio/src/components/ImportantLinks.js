@@ -1,3 +1,4 @@
+import { LucideMousePointerClick } from 'lucide-react';
 import React, { useEffect } from 'react';
 import { FaExternalLinkAlt } from 'react-icons/fa';
 
@@ -24,19 +25,19 @@ const linksData = [
         name: 'LinkedIn',
         link: 'https://www.linkedin.com/in/ashusnapx/',
         logo: 'https://www.edigitalagency.com.au/wp-content/uploads/Linkedin-logo-png.png',
-        description: 'Professional networking platform for connecting with colleagues and potential employers.',
+        description: 'Professional networking platform for connecting with colleagues and potential employers. ',
     },
     {
         name: 'X (Previously Twitter)',
-        link: 'https://twitter.com/ashu_snapx',
+        link: 'https://twitter.com/ashusnapx',
         logo: 'https://img.freepik.com/premium-vector/twitter-new-logo-twitter-x-twitter-logo-vinnitsa-ukraine-july-25-2023_230281-303.jpg?w=2000',
-        description: 'Love this platforms due to its networking capabilities.',
+        description: 'Love this platforms due to its networking capabilities. And i am very active here, beacause of people.',
     },
     {
         name: 'Medium',
         link: 'https://medium.com/@ashusnapx',
         logo: 'https://miro.medium.com/v2/resize:fit:8978/1*s986xIGqhfsN8U--09_AdA.png',
-        description: 'Blogging platform for sharing articles and stories on various topics.',
+        description: 'Blogging platform for sharing articles and stories on various topics. I love writing and express my thoughts while learning.',
     },
     {
         name: 'Hashnode',
@@ -52,27 +53,28 @@ const ImportantLinks = () => {
         window.scrollTo( 0, 0 );
     }, [] );
     return (
-        <div className="min-h-screen bg-black py-16">
-            <div className="container mx-auto px-4">
-                <h1 className="text-4xl font-bold text-white mb-8">Important Links</h1>
+        <div className="bg-gray-100 min-h-screen py-16 flex flex-col">
+            <div className="container mx-auto text-center">
+                <div className='flex items-center justify-center space-x-2'>
+                    <h1 className="text-4xl font-bold text-black/50 mb-10">Important Links</h1>
+                    <LucideMousePointerClick className='w-10 h-9 text-black/50 mb-10'/>
+                </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {linksData.map( ( link ) => (
-                        <div key={link.name} className="bg-white rounded-md shadow-md flex flex-col overflow-hidden">
-                            <div className="text-center py-4">
-                                <img src={link.logo} alt={link.name} className="w-2/3 mx-auto" />
+                        <div key={link.name} className="bg-white rounded-md shadow-md p-6 flex flex-col">
+                            <div className="h-20 mb-4 flex items-center justify-center">
+                                <img src={link.logo} alt={link.name} className="h-full" />
                             </div>
-                            <div className="px-6 pb-6">
-                                <h2 className="text-xl font-semibold mb-2 text-black">{link.name}</h2>
-                                <p className="text-gray-500 mb-4">{link.description}</p>
-                                <a
-                                    href={link.link}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="flex items-center bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition duration-300 flex-grow"
-                                >
-                                    <FaExternalLinkAlt className="mr-2" /> Link to Open
-                                </a>
-                            </div>
+                            <h2 className="text-xl font-semibold mb-2 text-black">{link.name}</h2>
+                            <p className="text-gray-500 mb-4 line-clamp-3">{link.description}</p>
+                            <a
+                                href={link.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center bg-blue-500 text-white py-2 px-4 rounded-md justify-center hover:bg-blue-600 transition duration-300"
+                            >
+                                <FaExternalLinkAlt className="mr-2" /> Link to Open
+                            </a>
                         </div>
                     ) )}
                 </div>

@@ -1,9 +1,40 @@
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
+import { Toaster, toast } from 'sonner';
+import { LucideGithub, LucideInstagram, LucideLinkedin, LucideTwitter } from 'lucide-react';
 
 const Contact = () => {
   const form = useRef();
-  const [ isMessageSent, setMessageSent ] = useState( false );
+  const [ name, setName ] = useState( '' );
+  const [ email, setEmail ] = useState( '' );
+  const [ message, setMessage ] = useState( '' );
+  const [ isEmailValid, setEmailValid ] = useState( true );
+  const [ isMessageValid, setMessageValid ] = useState( false );
+
+  const showToast = ( message ) => {
+    toast( message );
+  };
+
+  const validateEmail = ( email ) => {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test( email );
+  };
+
+  const handleNameChange = ( e ) => {
+    setName( e.target.value );
+    setEmailValid( true ); // Reset email validation status
+    setMessageValid( false ); // Reset message validation status
+  };
+
+  const handleEmailChange = ( e ) => {
+    setEmail( e.target.value );
+    setEmailValid( validateEmail( e.target.value ) );
+  };
+
+  const handleMessageChange = ( e ) => {
+    setMessage( e.target.value );
+    setMessageValid( e.target.value.length >= 30 );
+  };
 
   const sendEmail = ( e ) => {
     e.preventDefault();
@@ -11,40 +42,93 @@ const Contact = () => {
     emailjs.sendForm( 'service_p2yaaj4', 'template_cxndmkf', form.current, 'JgEYCSSohQj6br73X' )
       .then( ( result ) => {
         console.log( result.text );
-        setMessageSent( true );
-        form.current.reset(); // Reset the form
 
-        setTimeout( () => {
-          setMessageSent( false ); // Hide the success message after 3 seconds (adjust as needed)
-        }, 3000 ); // Adjust the timeout value as needed
+        // Show toast
+        showToast( `Thanks ${ name } for your query. Your query is: ${ message }` );
+
+        // Reset form and states
+        form.current.reset();
+        setName( '' );
+        setEmail( '' );
+        setMessage( '' );
+        setEmailValid( true );
+        setMessageValid( false );
       } )
       .catch( ( error ) => {
         console.log( error.text );
       } );
   };
 
+
   return (
-    <div className="bg-black min-h-screen flex flex-col md:flex-row items-center justify-center py-10 md:py-20 overflow-hidden">
+    <div className="bg-gray-100 flex flex-col md:flex-row items-center justify-center py-10 md:py-20">
+      {/* <Toaster richColors position='top-right' /> */}
       <div className="w-full md:w-1/2 lg:w-1/3 mx-auto md:order-2 text-black">
         <div className="bg-white p-6 md:p-8 rounded-md shadow-md text-black mx-2">
-          <h1 className="text-3xl font-bold mb-6 text-center md:text-left text-black">Contact Me</h1>
-          {isMessageSent && (
-            <p className="text-green-500 mb-4">Message sent successfully!</p>
-          )}
-          <form className="space-y-4" ref={form} onSubmit={sendEmail}>
+          <h1 className="text-3xl font-bold mb-6 text-center md:text-left text-black">Crafting Innovation: Reach Out for Expertise!</h1>
+          <span className='flex items-center justify-center space-x-4'>
+            <a href='https://twitter.com/ashusnapx' rel='noreferrer' target="_blank" className='text-blue-400 hover:text-blue-500 transition'>
+              <LucideTwitter className='w-6 h-6' />
+            </a>
+            <a href='https://instagram.com/ashusnapx' rel='noreferrer' target="_blank" className='text-pink-300 hover:text-pink-400 transition'>
+              <LucideInstagram className='w-6 h-6' />
+            </a>
+            <a href='https://linkedin.com/in/ashusnapx' rel='noreferrer' target="_blank" className='text-blue-400 hover:text-blue-500 transition'>
+              <LucideLinkedin className='w-6 h-6' />
+            </a>
+            <a href='https://github.com/ashusnapx' rel='noreferrer' target="_blank" className='text-gray-500 hover:text-gray-600 transition'>
+              <LucideGithub className='w-6 h-6' />
+            </a>
+          </span>
+          <h1 className='flex items-center justify-center mt-3'>---OR---</h1>
+          <form className="space-y-4" ref={form}>
             <div>
               <label htmlFor="name" className="block font-semibold mb-1">Your Name</label>
-              <input type="text" id="name" name="from_name" className="w-full border rounded p-2 focus:outline-none focus:border-blue-500" />
+              <input
+                type="text"
+                id="name"
+                name="from_name"
+                value={name}
+                onChange={handleNameChange}
+                className="w-full border rounded p-2 focus:outline-none focus:border-blue-500"
+              />
             </div>
             <div>
               <label htmlFor="email" className="block font-semibold mb-1">Email</label>
-              <input type="email" id="email" name="from_email" className="w-full border rounded p-2 focus:outline-none focus:border-blue-500" />
+              <input
+                type="email"
+                id="email"
+                name="from_email"
+                value={email}
+                onChange={handleEmailChange}
+                className={`w-full border rounded p-2 focus:outline-none ${ isEmailValid ? 'border-blue-500' : 'border-red-500'
+                  }`}
+              />
+              {!isEmailValid && (
+                <p className="text-red-500 mt-2">Please enter a valid email address</p>
+              )}
             </div>
             <div>
               <label htmlFor="message" className="block font-semibold mb-1">Your Message</label>
-              <textarea id="message" name="message" className="w-full border rounded p-2 h-32 focus:outline-none focus:border-blue-500"></textarea>
+              <textarea
+                id="message"
+                name="message"
+                value={message}
+                onChange={handleMessageChange}
+                className={`w-full border rounded p-2 h-32 focus:outline-none ${ isMessageValid ? 'border-blue-500' : 'border-red-500'
+                  }`}
+              />
+              {!isMessageValid && (
+                <p className="text-red-500 mt-2">Please enter a message with at least 30 characters</p>
+              )}
             </div>
-            <button type="submit" className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 w-full">
+            <button
+              type="submit"
+              onClick={sendEmail}
+              disabled={!isMessageValid}
+              className={`bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition-colors duration-300 focus:outline-none ${ isMessageValid ? 'cursor-pointer' : 'cursor-not-allowed opacity-50'
+                }`}
+            >
               Send
             </button>
           </form>

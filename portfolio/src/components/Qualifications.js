@@ -1,3 +1,4 @@
+import { LucideSchool2 } from 'lucide-react';
 import React, {useEffect} from 'react';
 
 
@@ -29,23 +30,28 @@ const Qualifications = () => {
     }, [] );
     
     return (
-        <div className="bg-black min-h-screen py-16 flex flex-col">
-            <div className="container mx-auto mt-1 text-center"> {/* Added mt-8 for top margin */}
-                <h1 className="text-4xl font-bold text-white mb-10 flex items-start">My Qualifications</h1>
+        <div className="bg-gray-100 py-16">
+            <div className="container mx-auto text-center">
+                <div className='flex justify-center space-x-2'>
+                    <h1 className="text-4xl font-bold text-black/50 mb-10">Qualifications</h1>
+                    <LucideSchool2 className='w-10 h-10 text-black/50 mb-10'/>
+                </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {qualificationsData.map( ( qualification, index ) => (
                         <div
                             key={index}
                             className="bg-white rounded-lg shadow-md p-6 flex flex-col justify-between"
                         >
-                            <div className="w-20 h-20 mx-auto mb-1">
-                                <img
-                                    src={qualification.imageSrc}
-                                    alt={`${ qualification.institution } Image`}
-                                    className="h-full w-full"
-                                />
+                            <div className="w-20 h-20 mx-auto mb-4 relative overflow-hidden rounded-full">
+                                {qualification.imageSrc && (
+                                    <img
+                                        src={qualification.imageSrc}
+                                        alt={qualification.institution}
+                                        className="object-cover w-full h-full"
+                                    />
+                                )}
                             </div>
-                            <div>
+                            <div className="text-center">
                                 <h3 className="text-xl font-semibold text-gray-800 mb-2">
                                     {qualification.institution}
                                 </h3>

@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { GiHamburgerMenu } from 'react-icons/gi';
 // import img_11up from '../images/img_11up.png';
-import Modal from './Modal'; 
-import { LucideAtom, LucideCakeSlice, LucideChevronUp, LucidePhoneCall, LucidePresentation, LucideSatellite } from 'lucide-react';
+import Modal from './Modal';
+import { LucideAtom, LucideBadge, LucideHammer, LucideMousePointerClick, LucidePhoneCall, LucideSchool } from 'lucide-react';
 
 const Header = () => {
     const [ isMenuOpen, setIsMenuOpen ] = useState( false );
@@ -23,7 +23,7 @@ const Header = () => {
                 <div className="flex items-center">
                     <Link to="/" className="text-2xl font-bold">
                         {/* <img src={img_11up} alt="" className="w-48 h-12" /> */}
-                        <div className='flex items-center space-x-2 hover:text-white text-gray-600'>
+                        <div className='flex text-white/80 items-center space-x-2 hover:text-white text-gray-600'>
                             <LucideAtom />
                             <h1>Ashutosh Kumar</h1>
                         </div>
@@ -36,17 +36,27 @@ const Header = () => {
                 </div>
                 {/* This ul element will only show on medium and larger screens */}
                 <ul className="hidden md:flex md:space-x-4 md:items-center text-lg mt-4 md:mt-0">
-                    <LucideCakeSlice />
-                    <NavItem to="/skills" text="SKILLS" location={location} />
-                    <LucidePresentation />
-                    <NavItem to="/projects" text="PROJECTS" location={location} />
-                    <LucideSatellite />
-                    <NavItem to="/imp-links" text="IMPORTANT LINKS" location={location} />
-                    <LucideChevronUp/>
-                    <NavItem to="/qualifications" text="QUALIFICATIONS" location={location} />
-                    <LucidePhoneCall />
-                    <NavItem to="/contact" text="CONTACT" location={location} />
-                    
+                    <div className='flex flex-row items-center justify-center'>
+                        <NavItem to="/skills" text="SKILLS" location={location} />
+                        <LucideHammer />
+                    </div>
+                    <div className='flex flex-row items-center justify-center'>
+                        <NavItem to="/projects" text="PROJECTS" location={location} />
+                        <LucideBadge />
+                    </div>
+                    <div className='flex flex-row items-center justify-center'>
+                        <NavItem to="/imp-links" text="IMPORTANT LINKS" location={location} />
+                        <LucideMousePointerClick />
+                    </div>
+                    <div className='flex flex-row items-center justify-center'>
+                        <NavItem to="/qualifications" text="QUALIFICATIONS" location={location} />
+                        <LucideSchool />
+                    </div>
+                    <div className='flex flex-row items-center justify-center'>
+                        <NavItem to="/contact" text="CONTACT" location={location} />
+                        <LucidePhoneCall />
+                    </div>
+
                 </ul>
             </nav>
             {isMenuOpen && (

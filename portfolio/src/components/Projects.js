@@ -1,6 +1,8 @@
+import { LucideProjector } from 'lucide-react';
 import { useEffect } from 'react';
-import React from 'react';
-import { FaGithub, FaExternalLinkAlt} from 'react-icons/fa';
+import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import ProgressiveImage from 'react-progressive-graceful-image';
+
 
 const projectsData = [
   {
@@ -64,20 +66,34 @@ const Projects = () => {
   useEffect( () => {
     window.scrollTo( 0, 0 );
   }, [] );
+
   return (
-    <div className="relative min-h-screen bg-black">
+    <div className="relative min-h-screen bg-gray-100">
       <div className="container mx-auto py-12 px-4">
-        <h1 className="text-4xl font-bold text-white mb-8">My Projects</h1>
+        <div className='flex space-x-2 items-center justify-center'>
+          <h1 className="text-4xl text-center font-bold text-black/50 mb-8">Projects</h1>
+          <LucideProjector className=" text-black/50 mb-8 w-10 h-9 " />
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projectsData.map( ( project ) => (
             <div key={project.id} className="bg-white rounded-md shadow-md p-4 ">
-              <img
+              <ProgressiveImage
+                delay={300}
                 src={project.imageSrc}
-                alt={project.name}
-                loading="lazy" // Add this line for lazy loading
-                className="w-full h-48 object-cover rounded-md mb-4"
-              />
-              <h2 className="text-xl font-semibold mb-2 text-black">{project.name}</h2>
+                placeholder="tiny-image.jpg"
+              >
+                {( src, loading ) => (
+                  <img
+                    src={src}
+                    alt={project.name}
+                    loading={loading ? 'lazy' : 'eager'}
+                    className="w-full h-48 object-cover rounded-md mb-4"
+                  />
+                )}
+              </ProgressiveImage>
+              <h2 className="text-xl font-semibold mb-2 text-black">
+                {project.name}
+              </h2>
               <p className="text-gray-500 mb-2">{project.techStacks}</p>
               <p className="text-gray-800">{project.description}</p>
               <div className="mt-4 flex space-x-4">
