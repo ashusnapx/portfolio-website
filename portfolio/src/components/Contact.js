@@ -115,11 +115,11 @@ const Contact = () => {
                 name="message"
                 value={message}
                 onChange={handleMessageChange}
-                className={`w-full border rounded p-2 h-32 focus:outline-none ${ isMessageValid ? 'border-blue-500' : 'border-red-500'
+                className={`w-full border rounded p-2 h-32 focus:outline-none ${ isMessageValid ? 'border-blue-500' : 'border-black'
                   }`}
               />
               {!isMessageValid && (
-                <p className="text-red-500 mt-2">Please enter a message with at least 30 characters</p>
+                <p className="text-black mt-2">Please enter a message with at least 30 characters</p>
               )}
             </div>
             <button

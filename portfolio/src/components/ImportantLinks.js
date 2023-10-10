@@ -1,4 +1,4 @@
-import { LucideMousePointerClick } from 'lucide-react';
+import { LucideExternalLink, LucideLink, LucideLink2, LucideMousePointerClick } from 'lucide-react';
 import React, { useEffect } from 'react';
 import { FaExternalLinkAlt } from 'react-icons/fa';
 
@@ -63,7 +63,7 @@ const ImportantLinks = () => {
                     {linksData.map( ( link ) => (
                         <div key={link.name} className="bg-white rounded-md shadow-md p-6 flex flex-col">
                             <div className="h-20 mb-4 flex items-center justify-center">
-                                <img src={link.logo} alt={link.name} className="h-full" />
+                                <img src={link.logo} alt={link.name} className="h-full shadow-xl p-1 rounded-md border border-gray-100" />
                             </div>
                             <h2 className="text-xl font-semibold mb-2 text-black">{link.name}</h2>
                             <p className="text-gray-500 mb-4 line-clamp-3">{link.description}</p>
@@ -73,7 +73,7 @@ const ImportantLinks = () => {
                                 rel="noopener noreferrer"
                                 className="flex items-center bg-blue-500 text-white py-2 px-4 rounded-md justify-center hover:bg-blue-600 transition duration-300"
                             >
-                                <FaExternalLinkAlt className="mr-2" /> Link to Open
+                                <LucideLink2 className='mr-2'/> Link to {link.name}'s profile
                             </a>
                         </div>
                     ) )}

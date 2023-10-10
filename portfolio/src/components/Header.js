@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { GiHamburgerMenu } from 'react-icons/gi';
 // import img_11up from '../images/img_11up.png';
 import Modal from './Modal';
 import { LucideAtom, LucideBadge, LucideHammer, LucideMenu, LucideMousePointerClick, LucidePhoneCall, LucideSchool } from 'lucide-react';
@@ -23,7 +22,7 @@ const Header = () => {
                 <div className="flex items-center">
                     <Link to="/" className="text-2xl font-bold">
                         {/* <img src={img_11up} alt="" className="w-48 h-12" /> */}
-                        <div className='flex text-white/80 items-center space-x-2 hover:text-white text-gray-600'>
+                        <div className='flex text-white/90 items-center space-x-2 hover:text-white text-gray-600'>
                             <LucideAtom />
                             <h1>Ashutosh Kumar</h1>
                         </div>
@@ -83,7 +82,7 @@ const NavItem = ( { to, text, location } ) => {
         <li>
             <Link
                 to={to}
-                className={`block px-4 py-2 text-gray-300 relative transition-colors duration-300 ${ isActive ? 'font-semibold text-blue-500' : '' }`}
+                className={`block px-4 py-2 text-gray-300 hover:text-white relative transition-colors duration-300 ${ isActive ? 'font-semibold text-blue-500' : '' }`}
                 style={isActive ? { borderBottom: '2px solid #3182CE' } : {}}
             >
                 {text}

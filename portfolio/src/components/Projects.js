@@ -87,7 +87,7 @@ const Projects = () => {
                     src={src}
                     alt={project.name}
                     loading={loading ? 'lazy' : 'eager'}
-                    className="w-full h-48 object-cover rounded-md mb-4"
+                    className="w-full h-48 object-cover rounded-md mb-4 shadow-xl"
                   />
                 )}
               </ProgressiveImage>
