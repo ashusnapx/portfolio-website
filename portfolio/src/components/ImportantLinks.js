@@ -63,7 +63,7 @@ const ImportantLinks = () => {
                     {linksData.map( ( link ) => (
                         <div key={link.name} className="bg-white rounded-md shadow-md p-6 flex flex-col">
                             <div className="h-20 mb-4 flex items-center justify-center">
-                                <img src={link.logo} alt={link.name} className="h-full shadow-xl p-1 rounded-md border border-gray-100" />
+                                <img src={link.logo} alt={link.name} className="h-full  p-1 rounded-md" />
                             </div>
                             <h2 className="text-xl font-semibold mb-2 text-black">{link.name}</h2>
                             <p className="text-gray-500 mb-4 line-clamp-3">{link.description}</p>
