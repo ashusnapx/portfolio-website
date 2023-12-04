@@ -10,6 +10,7 @@ const Home = () => {
     { text: "MERN Developer", color: "#10B981" },
     { text: "C++ Programmer", color: "#3B82F6" },
     { text: "Problem Solver", color: "#6366F1" },
+    { text: "GenAI Lover", color: "#3B82F6" },
     // { text: "Music Lover", color: "#7C3AED" }
   ];
 
