@@ -12,7 +12,7 @@ import { AiFillDatabase } from 'react-icons/ai';
 import { GiTeamIdea } from "react-icons/gi";
 import { RiEnglishInput } from "react-icons/ri";
 import { LucideHammer } from 'lucide-react';
-import { SiGooglecloud, SiFuturelearn, SiVisualstudiocode, SiPandas, SiPlotly, SiNumpy, SiMongodb, SiExpress, SiTailwindcss } from "react-icons/si";
+import { SiGooglecloud, SiFuturelearn, SiVisualstudiocode, SiPandas, SiPlotly, SiNumpy, SiMongodb, SiExpress, SiTailwindcss, SiDocker, SiKubernetes } from "react-icons/si";
 import { BsFillPatchQuestionFill } from "react-icons/bs";
 import { FaGitlab } from "react-icons/fa";
 import { TbBrandTypescript } from "react-icons/tb";
@@ -98,27 +98,37 @@ const Skills = () => {
           </div>
 
 
+          {/* devops */}
           <div className="bg-white/40 p-6 rounded-lg shadow-md">
-            <h2 className="text-2xl font-semibold mb-4 text-indigo-600">
+            <h2 className="text-2xl font-semibold mb-4 text-indigo-600">Devops</h2>
+            <ul className="list-disc pl-6 text-gray-800">
+              <li className="mb-2"><SiDocker className="inline mr-2" /> Docker</li>
+              <li className="mb-2"><SiKubernetes className="inline mr-2" /> Kubernetes</li>
+            </ul>
+          </div>
+
+
+          <div className="bg-white/40 p-6 rounded-lg shadow-md">
+            <h2 className="text-2xl font-semibold mb-4 text-green-600">
               Cloud Services
             </h2>
             <ul className="list-disc pl-6 text-gray-800">
-              <li className="list-disc mb-2 flex items-center">
-                <SiGooglecloud className="mr-2" /> Google Cloud Service
+              <li className="mb-2">
+                <SiGooglecloud className="inline mr-2" /> Google Cloud Service
               </li>
             </ul>
           </div>
 
 
           <div className="bg-white/40  p-6 rounded-lg shadow-md">
-            <h2 className="text-2xl font-semibold mb-4 text-green-600">Development Tools</h2>
+            <h2 className="text-2xl font-semibold mb-4 text-indigo-600">Development Tools</h2>
             <ul className="list-disc pl-6 text-gray-800">
               <li className="mb-2"><FaGitlab className="inline mr-2" /> GitLab</li>
             </ul>
           </div>
 
           <div className="bg-white/40 p-6 rounded-lg shadow-md">
-            <h2 className="text-2xl font-semibold mb-4 text-indigo-600">
+            <h2 className="text-2xl font-semibold mb-4 text-green-600">
               Communication & Collaboration
             </h2>
             <ul className="list-disc pl-6 text-gray-800">
