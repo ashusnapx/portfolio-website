@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import ProgressiveImage from 'react-progressive-graceful-image';
-import { Toaster, toast } from 'sonner';
+import { toast } from 'sonner';
 import { LucideLightbulb, LucideMilestone } from 'lucide-react';
 import { Tilt } from 'react-tilt';
 
@@ -10,7 +10,7 @@ const Home = () => {
     { text: "MERN Developer", color: "#10B981" },
     { text: "C++ Programmer", color: "#3B82F6" },
     { text: "Problem Solver", color: "#6366F1" },
-    { text: "Generative AI Lover", color: "#3B82F6" },
+    // { text: "Generative AI Lover", color: "#3B82F6" },
     // { text: "Music Lover", color: "#7C3AED" }
   ];
 
