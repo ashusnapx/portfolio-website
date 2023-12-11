@@ -34,7 +34,7 @@ const Skills = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
 
-
+{/* programming lang */}
           <div className="bg-white/40 p-6 rounded-lg shadow-md">
             <h2 className="text-2xl font-semibold mb-4 text-indigo-600">
               Programming Languages 
@@ -60,7 +60,7 @@ const Skills = () => {
 
 
 
-
+{/* frontend */}
           <div className="bg-white/40  p-6 rounded-lg shadow-md">
             <h2 className="text-2xl font-semibold mb-4 text-green-600">Frontend Development</h2>
             <ul className="list-disc pl-6 text-gray-800">
@@ -74,7 +74,7 @@ const Skills = () => {
 
 
 
-
+{/* backend */}
           <div className="bg-white/40 p-6 rounded-lg shadow-md">
             <h2 className="text-2xl font-semibold mb-4 text-blue-600">Backend Development</h2>
             <ul className="list-disc pl-6 text-gray-800">
@@ -86,7 +86,7 @@ const Skills = () => {
 
 
 
-
+{/* data analytics */}
           <div className="bg-white/40 p-6 rounded-lg shadow-md">
             <h2 className="text-2xl font-semibold mb-4 text-green-600">Data Analysis</h2>
             <ul className="list-disc pl-6 text-gray-800">
@@ -103,12 +103,12 @@ const Skills = () => {
             <h2 className="text-2xl font-semibold mb-4 text-indigo-600">Devops</h2>
             <ul className="list-disc pl-6 text-gray-800">
               <li className="mb-2"><SiDocker className="inline mr-2" /> Docker</li>
-              <li className="mb-2"><SiKubernetes className="inline mr-2" /> Kubernetes</li>
+              {/* <li className="mb-2"><SiKubernetes className="inline mr-2" /> Kubernetes</li> */}
             </ul>
           </div>
 
 
-          <div className="bg-white/40 p-6 rounded-lg shadow-md">
+          {/* <div className="bg-white/40 p-6 rounded-lg shadow-md">
             <h2 className="text-2xl font-semibold mb-4 text-green-600">
               Cloud Services
             </h2>
@@ -117,15 +117,16 @@ const Skills = () => {
                 <SiGooglecloud className="inline mr-2" /> Google Cloud Service
               </li>
             </ul>
-          </div>
+          </div> */}
 
 
-          <div className="bg-white/40  p-6 rounded-lg shadow-md">
+          {/* development tools */}
+          {/* <div className="bg-white/40  p-6 rounded-lg shadow-md">
             <h2 className="text-2xl font-semibold mb-4 text-indigo-600">Development Tools</h2>
             <ul className="list-disc pl-6 text-gray-800">
               <li className="mb-2"><FaGitlab className="inline mr-2" /> GitLab</li>
             </ul>
-          </div>
+          </div> */}
 
           <div className="bg-white/40 p-6 rounded-lg shadow-md">
             <h2 className="text-2xl font-semibold mb-4 text-green-600">
