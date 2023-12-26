@@ -138,7 +138,7 @@ const Contact = () => {
         <div className="flex flex-col items-center">
           <img src="https://i.postimg.cc/J4Ytxrww/profile-pic-3.png" alt="Ashutosh Kumar" className="rounded-full h-48 w-48 md:h-96 md:w-96 mb-4 object-cover shadow-2xl hover:grayscale" />
           <h1 className="text-3xl md:text-4xl text-gray-400 font-bold mb-3">Ashutosh Kumar</h1>
-          <p className="text-gray-600 font-light text-lg md:text-2xl text-center md:text-left">Made with ❤️ by Ashutosh Kumar</p>
+          <p className="text-gray-600 font-light text-lg md:text-2xl text-center md:text-left">Baked with ❤️ by Ashutosh Kumar</p>
         </div>
       </div>
     </div>
