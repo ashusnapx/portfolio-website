@@ -64,14 +64,14 @@ const Header = () => {
             />
             <LucideMousePointerClick />
           </div>
-          <div className='flex flex-row items-center justify-center'>
+          {/* <div className='flex flex-row items-center justify-center'>
             <NavItem
               to='/qualifications'
               text='QUALIFICATIONS'
               location={location}
             />
             <LucideSchool />
-          </div>
+          </div> */}
           <div className='flex flex-row items-center justify-center'>
             <NavItem to='/contact' text='CONTACT' location={location} />
             <LucidePhoneCall />
@@ -89,11 +89,11 @@ const Header = () => {
               text='IMPORTANT LINKS'
               location={location}
             />
-            <NavItem
+            {/* <NavItem
               to='/qualifications'
               text='QUALIFICATIONS'
               location={location}
-            />
+            /> */}
             <NavItem to='/contact' text='CONTACT' location={location} />
           </ul>
         </Modal>
