@@ -12,7 +12,7 @@ import ImportantLinks from './components/ImportantLinks';
 
 function App() {
   return (
-    <div className=" bg-gray-100 min-h-screen">
+    <div className='bg-gray-100 min-h-screen antialiased grainy font-montserrat'>
       <Header />
       <Outlet />
       <Footer />

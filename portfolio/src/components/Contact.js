@@ -61,7 +61,7 @@ const Contact = () => {
 
 
   return (
-    <div className="bg-gray-100 flex flex-col md:flex-row items-center justify-center py-10 md:py-20">
+    <div className="bg-gray-100 flex flex-col md:flex-row items-center justify-center py-5 md:py-2">
       {/* <Toaster richColors position='top-right' /> */}
       <div className="w-full md:w-1/2 lg:w-1/3 mx-auto md:order-2 text-black">
         <div className="bg-white p-6 md:p-8 rounded-md shadow-md text-black mx-2">
