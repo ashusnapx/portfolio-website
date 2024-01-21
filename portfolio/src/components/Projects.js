@@ -6,58 +6,77 @@ import ProgressiveImage from 'react-progressive-graceful-image';
 
 const projectsData = [
   {
+    id: 0,
+    name: 'Chatbot',
+    imageSrc:
+      'https://i.postimg.cc/q7brn5HL/Screenshot-2024-01-21-at-11-18-23-AM.png', // Replace with actual image URL
+    techStacks: 'Pyhton, Google Generative AI, Streamlit',
+    // description: 'A project description goes here.',
+    githubLink: 'https://github.com/ashusnapx/gemini-chatbot',
+    liveLink: 'https://ashusnapx-gemini-chatbot-main-b5ybtn.streamlit.app/',
+  },
+  {
     id: 1,
     name: 'Airbnb Clone',
-    imageSrc: 'https://i.postimg.cc/nc7XGF4S/Screenshot-2023-10-07-at-1-03-54-AM.png', // Replace with actual image URL
+    imageSrc:
+      'https://i.postimg.cc/nc7XGF4S/Screenshot-2023-10-07-at-1-03-54-AM.png', // Replace with actual image URL
     techStacks: 'React, Tailwind CSS, Supabase, OAuth',
     // description: 'A project description goes here.',
     githubLink: 'https://github.com/ashusnapx/airbnb-x-oyo',
-    liveLink:'https://airbnb-by-ashusnapx.vercel.app/'
+    liveLink: 'https://airbnb-by-ashusnapx.vercel.app/',
   },
   {
     id: 2,
     name: 'Swiggie - Food Ordering App',
-    imageSrc: 'https://i.postimg.cc/8zd9ntRC/Screenshot-2023-08-30-at-4-39-38-PM.png', // Replace with actual image URL
-    techStacks: 'React, Tailwind CSS, React router dom, Redux toolkit, [Please enable CORS]',
+    imageSrc:
+      'https://i.postimg.cc/8zd9ntRC/Screenshot-2023-08-30-at-4-39-38-PM.png', // Replace with actual image URL
+    techStacks:
+      'React, Tailwind CSS, React router dom, Redux toolkit, [Please enable CORS]',
     // description: 'Another project description.',
-    githubLink: 'https://github.com/ashusnapx/react-final-revision/tree/main/DAY%20-%204',
-    liveLink: 'https://swiggie.vercel.app/'
+    githubLink:
+      'https://github.com/ashusnapx/react-final-revision/tree/main/DAY%20-%204',
+    liveLink: 'https://swiggie.vercel.app/',
   },
   {
     id: 3,
     name: 'Youtube Playlist Checklist',
-    imageSrc: 'https://i.postimg.cc/Gpp3VdDC/Screenshot-2023-10-01-at-1-11-58-AM.png', // Replace with actual image URL
+    imageSrc:
+      'https://i.postimg.cc/Gpp3VdDC/Screenshot-2023-10-01-at-1-11-58-AM.png', // Replace with actual image URL
     techStacks: 'React, Tailwind CSS',
     // description: 'Another project description.',
     githubLink: 'https://github.com/ashusnapx/checklist-app',
-    liveLink: 'https://youtube-playlist-checklist.vercel.app/'
+    liveLink: 'https://youtube-playlist-checklist.vercel.app/',
   },
   {
     id: 4,
     name: 'Youtube Playlist Analytics',
-    imageSrc: 'https://i.postimg.cc/L6dbbDP4/Screenshot-2023-10-07-at-1-10-10-AM.png', // Replace with actual image URL
+    imageSrc:
+      'https://i.postimg.cc/L6dbbDP4/Screenshot-2023-10-07-at-1-10-10-AM.png', // Replace with actual image URL
     techStacks: 'Python, Django, [Revamped UI]',
     // description: 'Another project description.',
     githubLink: 'https://github.com/ashusnapx/youtube-playlist-length',
-    liveLink: 'https://yt-playlist-length-4nzq.onrender.com/'
+    liveLink: 'https://yt-playlist-length-4nzq.onrender.com/',
   },
   {
     id: 5,
     name: 'Portfolio Website',
-    imageSrc: 'https://i.postimg.cc/mrLXp9yf/Screenshot-2023-08-30-at-4-44-36-PM.png', // Replace with actual image URL
+    imageSrc:
+      'https://i.postimg.cc/mrLXp9yf/Screenshot-2023-08-30-at-4-44-36-PM.png', // Replace with actual image URL
     techStacks: 'React, Tailwind CSS, React router dom',
     // description: 'Another project description.',
-    githubLink: 'https://github.com/ashusnapx/portfolio-website/tree/main/portfolio',
-    liveLink: 'https://ashusnapx.vercel.app/'
+    githubLink:
+      'https://github.com/ashusnapx/portfolio-website/tree/main/portfolio',
+    liveLink: 'https://ashusnapx.vercel.app/',
   },
   {
     id: 6,
     name: 'Restaurant Website',
-    imageSrc: 'https://i.postimg.cc/BQ7BZDJC/Screenshot-2023-08-30-at-4-43-05-PM.png', // Replace with actual image URL
+    imageSrc:
+      'https://i.postimg.cc/BQ7BZDJC/Screenshot-2023-08-30-at-4-43-05-PM.png', // Replace with actual image URL
     techStacks: 'HTML, CSS',
     // description: 'Another project description.',
     githubLink: 'https://github.com/ashusnapx/ashufoodlove.github.io',
-    liveLink: 'https://ashusnapx.github.io/ashufoodlove.github.io/'
+    liveLink: 'https://ashusnapx.github.io/ashufoodlove.github.io/',
   },
   // Add more projects...
 ];
