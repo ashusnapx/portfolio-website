@@ -7,6 +7,16 @@ import ProgressiveImage from 'react-progressive-graceful-image';
 const projectsData = [
   {
     id: 0,
+    name: 'Know About Your Food',
+    imageSrc:
+      'https://i.postimg.cc/nz3zBkKx/Screenshot-2024-01-22-at-11-46-59-PM.png',
+    techStacks: 'Python, Google Gemini Vision Pro, Streamlit',
+    // description: 'A project description goes here.',
+    githubLink: 'https://github.com/ashusnapx/know-the-ingredient',
+    liveLink: 'https://know-your-food-ashusnapx.streamlit.app/',
+  },
+  {
+    id: 0,
     name: 'AI Instagram Caption Generator',
     imageSrc:
       'https://i.postimg.cc/hjvk4njn/Screenshot-2024-01-22-at-3-42-41-PM.png',
