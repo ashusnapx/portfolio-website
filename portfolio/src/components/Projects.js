@@ -7,6 +7,26 @@ import ProgressiveImage from 'react-progressive-graceful-image';
 const projectsData = [
   {
     id: 0,
+    name: 'AI Instagram Caption Generator',
+    imageSrc:
+      'https://i.postimg.cc/hjvk4njn/Screenshot-2024-01-22-at-3-42-41-PM.png',
+    techStacks: 'Python, Google Gemini Vision Pro, Streamlit',
+    // description: 'A project description goes here.',
+    githubLink: 'https://github.com/ashusnapx/ai-instagram-caption',
+    liveLink: 'https://ai-instagram-caption-ashusnapx.streamlit.app/',
+  },
+  {
+    id: 1,
+    name: 'AI Coal Mines Laws',
+    imageSrc:
+      'https://i.postimg.cc/6pGxntLp/Screenshot-2024-01-22-at-3-33-22-PM.png',
+    techStacks: 'Python, Google Gemini Pro, Streamlit',
+    // description: 'A project description goes here.',
+    githubLink: 'https://github.com/ashusnapx/gemini-mining',
+    liveLink: 'https://dgms-gemini-ashusnapx.streamlit.app/',
+  },
+  {
+    id: 2,
     name: 'Chatbot',
     imageSrc:
       'https://i.postimg.cc/q7brn5HL/Screenshot-2024-01-21-at-11-18-23-AM.png', // Replace with actual image URL
@@ -16,7 +36,7 @@ const projectsData = [
     liveLink: 'https://ashusnapx-gemini-chatbot-main-b5ybtn.streamlit.app/',
   },
   {
-    id: 1,
+    id: 3,
     name: 'Airbnb Clone',
     imageSrc:
       'https://i.postimg.cc/nc7XGF4S/Screenshot-2023-10-07-at-1-03-54-AM.png', // Replace with actual image URL
@@ -26,7 +46,7 @@ const projectsData = [
     liveLink: 'https://airbnb-by-ashusnapx.vercel.app/',
   },
   {
-    id: 2,
+    id: 4,
     name: 'Swiggie - Food Ordering App',
     imageSrc:
       'https://i.postimg.cc/8zd9ntRC/Screenshot-2023-08-30-at-4-39-38-PM.png', // Replace with actual image URL
@@ -38,7 +58,7 @@ const projectsData = [
     liveLink: 'https://swiggie.vercel.app/',
   },
   {
-    id: 3,
+    id: 5,
     name: 'Youtube Playlist Checklist',
     imageSrc:
       'https://i.postimg.cc/Gpp3VdDC/Screenshot-2023-10-01-at-1-11-58-AM.png', // Replace with actual image URL
@@ -48,7 +68,7 @@ const projectsData = [
     liveLink: 'https://youtube-playlist-checklist.vercel.app/',
   },
   {
-    id: 4,
+    id: 6,
     name: 'Youtube Playlist Analytics',
     imageSrc:
       'https://i.postimg.cc/L6dbbDP4/Screenshot-2023-10-07-at-1-10-10-AM.png', // Replace with actual image URL
@@ -58,7 +78,7 @@ const projectsData = [
     liveLink: 'https://yt-playlist-length-4nzq.onrender.com/',
   },
   {
-    id: 5,
+    id: 7,
     name: 'Portfolio Website',
     imageSrc:
       'https://i.postimg.cc/mrLXp9yf/Screenshot-2023-08-30-at-4-44-36-PM.png', // Replace with actual image URL
@@ -69,7 +89,7 @@ const projectsData = [
     liveLink: 'https://ashusnapx.vercel.app/',
   },
   {
-    id: 6,
+    id: 7,
     name: 'Restaurant Website',
     imageSrc:
       'https://i.postimg.cc/BQ7BZDJC/Screenshot-2023-08-30-at-4-43-05-PM.png', // Replace with actual image URL
@@ -78,7 +98,6 @@ const projectsData = [
     githubLink: 'https://github.com/ashusnapx/ashufoodlove.github.io',
     liveLink: 'https://ashusnapx.github.io/ashufoodlove.github.io/',
   },
-  // Add more projects...
 ];
 
 const Projects = () => {
