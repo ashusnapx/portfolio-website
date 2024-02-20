@@ -1,60 +1,47 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import ProgressiveImage from 'react-progressive-graceful-image';
-import { toast } from 'sonner';
 import { LucideLightbulb, LucideMilestone } from 'lucide-react';
 
 const Home = () => {
   const introText = [
-    { text: "MERN Developer", color: "#10B981" },
-    { text: "C++ Programmer", color: "#3B82F6" },
-    { text: "Problem Solver", color: "#6366F1" },
+    { text: 'MERN Developer', color: '#10B981' },
+    { text: 'C++ Programmer', color: '#3B82F6' },
+    { text: 'Problem Solver', color: '#6366F1' },
     // { text: "Generative AI Lover", color: "#3B82F6" },
     // { text: "Music Lover", color: "#7C3AED" }
   ];
 
-  const [ currentIndex, setCurrentIndex ] = useState( 0 );
-  const [ currentColor, setCurrentColor ] = useState( introText[ 0 ].color );
-  const textContainerRef = useRef( null );
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentColor, setCurrentColor] = useState(introText[0].color);
+  const textContainerRef = useRef(null);
 
-  useEffect( () => {
-    const interval = setInterval( () => {
-      setCurrentIndex( prevIndex => ( prevIndex + 1 ) % introText.length );
-      setCurrentColor( introText[ currentIndex ].color );
-    }, 3000 );
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % introText.length);
+      setCurrentColor(introText[currentIndex].color);
+    }, 3000);
 
-    return () => clearInterval( interval );
-  }, [ currentIndex ] );
+    return () => clearInterval(interval);
+  }, [currentIndex]);
 
   return (
-    <div className='bg-gray-200/20 flex flex-col md:flex-row items-center justify-center py-10 md:py-20'>
-      {/* <Toaster position="top-right" expand={true} richColors /> */}
+    <div className='bg-gray-200/20 flex flex-col md:flex-row items-center justify-center py-15 md:py-20'>
       <div className='md:w-1/2 p-8 md:pl-0 md:pr-4 flex justify-center items-center'>
-        <ProgressiveImage
-          src='https://i.postimg.cc/9XSQjMxG/image.png'
-          placeholder=''
-        >
-          {(src, loading) => (
-            <img
-              src={src}
-              alt='Ashutosh Kumar'
-              className={`rounded-full drop-shadow-2xl h-72 w-72 mx-auto mb-4 object-cover md:h-96 md:w-96 ${
-                loading ? 'opacity-50' : ''
-              }`}
-              loading={loading ? 'lazy' : 'eager'}
-            />
-          )}
-        </ProgressiveImage>
+        <img
+          src='https://res.cloudinary.com/dxowfa3zj/image/upload/v1708457047/tskl10qzp3ausrzugq9v.png'
+          alt='ashusnapx'
+          className='rounded-full drop-shadow-2xl h-72 w-72 mx-auto mb-4 object-cover md:h-96 md:w-96'
+        />
       </div>
       <div className='md:w-1/2 p-4 md:text-left'>
-        <h1 className='text-4xl md:text-5xl font-bold text-gray-600 mb-2 md:mb-4 '>
+        <h1 className='text-4xl md:text-5xl font-bold text-gray-600 mb-2 md:mb-4 text-center md:text-left'>
           I'm a{' '}
           <span style={{ color: currentColor }} ref={textContainerRef}>
             {introText[currentIndex].text}
           </span>
         </h1>
         <div>
-          <p className='text-2xl md:text-4xl text-gray-600 mb-4 md:mb-6'>
+          <p className='text-2xl md:text-4xl text-gray-600 mb-4 md:mb-6 text-center md:text-left'>
             From India<span className='animate-pulse'> 🇮🇳</span>
           </p>
         </div>
