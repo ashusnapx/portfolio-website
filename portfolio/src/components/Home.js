@@ -31,6 +31,8 @@ const Home = () => {
           src='https://res.cloudinary.com/dxowfa3zj/image/upload/v1708457047/tskl10qzp3ausrzugq9v.png'
           alt='ashusnapx'
           className='rounded-full drop-shadow-2xl h-72 w-72 mx-auto mb-4 object-cover md:h-96 md:w-96'
+          loading='eager'
+          decoding='async'
         />
       </div>
       <div className='md:w-1/2 p-4 md:text-left'>
