@@ -262,3 +262,9 @@ export const socialMediaLinks = [
     color: 'text-gray-500 hover:text-gray-600',
   },
 ];
+
+export const introText = [
+  { text: 'MERN Developer', color: '#10B981' },
+  { text: 'C++ Programmer', color: '#3B82F6' },
+  { text: 'Problem Solver', color: '#6366F1' },
+];

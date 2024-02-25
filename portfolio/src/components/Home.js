@@ -1,16 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { LucideLightbulb, LucideMilestone } from 'lucide-react';
+import { introText } from '../constants/constants';
 
 const Home = () => {
-  const introText = [
-    { text: 'MERN Developer', color: '#10B981' },
-    { text: 'C++ Programmer', color: '#3B82F6' },
-    { text: 'Problem Solver', color: '#6366F1' },
-    // { text: "Generative AI Lover", color: "#3B82F6" },
-    // { text: "Music Lover", color: "#7C3AED" }
-  ];
-
   const [currentIndex, setCurrentIndex] = useState(0);
   const [currentColor, setCurrentColor] = useState(introText[0].color);
   const textContainerRef = useRef(null);
