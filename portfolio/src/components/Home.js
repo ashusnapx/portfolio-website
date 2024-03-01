@@ -42,7 +42,7 @@ const Home = () => {
         </div>
         <div className='flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4 items-center justify-start '>
           <a
-            href='https://bit.ly/415WyYH'
+            href='https://bit.ly/49TjlKz'
             target='_blank'
             rel='noopener noreferrer'
             className='bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full text-lg font-semibold transition duration-300 flex flex-row items-center justify-center shadow-xl hover:shadow-2xl'
